@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Henri Colaux</author>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>278</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>FAM-N optimisation</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="3" column="0">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="1">
+         <widget class="QCommandLinkButton" name="commandLinkButton">
+          <property name="text">
+           <string>Optimise</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QWidget" name="widget" native="true"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="transfer_box">
+        <property name="title">
+         <string>Transfer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="transfer_simple_title">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+             <strikeout>false</strikeout>
+            </font>
+           </property>
+           <property name="text">
+            <string>Simple FAM-N</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="transfer_coherence_layout">
+           <item>
+            <widget class="QLabel" name="transfer_coherence_txt">
+             <property name="text">
+              <string>Coherence</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QComboBox" name="transfer_coherence_combo">
+             <item>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>7</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>9</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::MinimumExpanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="param_complex_title">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Complex FAM-N</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="transfer_complex_layout">
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="transfer_complex_list_field"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="transfer_complex_list_txt">
+             <property name="text">
+              <string>Transfer list</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="transfer_complex_nutation_txt">
+             <property name="text">
+              <string>Nutation list</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="transfer_complex_nutation_field"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::MinimumExpanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="param_group">
+        <property name="title">
+         <string>Parameters</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="param_nucleus_layout">
+           <item>
+            <widget class="QLabel" name="param_nucleus_text">
+             <property name="text">
+              <string>Nucleus</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QComboBox" name="param_nucleus_combo">
+             <property name="currentText">
+              <string>23Na</string>
+             </property>
+             <property name="currentIndex">
+              <number>5</number>
+             </property>
+             <property name="maxVisibleItems">
+              <number>12</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>7Li</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>9Be</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>11B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>17O</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>21Ne</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>23Na</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>25Mg</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>27Al</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>33S</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>35Cl</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>37Cl</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>39K</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>41K</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>43Ca</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>45Sc</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>47Ti</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>49Ti</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>51V</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>53Cr</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>55Mn</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>59Co</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>61Ni</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>63Cu</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>65Cu</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>67Zn</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>69Ga</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>71Ga</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>73Ge</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>75As</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>79Br</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>81Br</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>83Kr</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>85Rb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>87Rb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>87Sr</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>91Zr</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>93Nb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>95Mo</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>97Mo</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>99Tc</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>99Ru</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>101Ru</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>103Rh</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>105Pb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>113In</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>115In</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>121Sb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>123Sb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>127I</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>131Xe</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>133Cs</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>135Ba</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>137Ba</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>139La</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>141Pr</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>143Nd</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>145Nd</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>147Sm</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>149Sm</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>151Eu</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>153Eu</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>155Gb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>157Gb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>159Td</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>161Dy</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>163Ty</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>165ho</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>167Er</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>173Yb</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>175Lu</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>177Hf</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>179Hf</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>181Ta</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>185Re</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>187Re</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>189Os</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>191Ir</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>193Ir</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>197Au</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>201Hg</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>209Bi</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>235U</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="param_spin_layout">
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="param_spin_text">
+             <property name="text">
+              <string>Spin</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="param_spin_number">
+             <property name="text">
+              <string>3/2</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="param_spacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="Line" name="param_line">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="param_exp_layout">
+           <property name="verticalSpacing">
+            <number>3</number>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="param_larmor_field">
+             <property name="text">
+              <string>600</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="param_larmor_unit">
+             <property name="text">
+              <string>MHz</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="param_etaq_txt">
+             <property name="text">
+              <string>ηQ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="param_cq_text">
+             <property name="text">
+              <string>CQ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="param_larmor_txt">
+             <property name="text">
+              <string>ν0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="param_cq_field">
+             <property name="text">
+              <string>1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="param_rf_txt">
+             <property name="text">
+              <string>ν1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="param_rf_unit">
+             <property name="text">
+              <string>kHz</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="param_cq_unit">
+             <property name="text">
+              <string>MHz</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="param_etaq_field">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="param_rf_field">
+             <property name="text">
+              <string>100</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>278</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionsave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Export</string>
+    </property>
+    <widget class="QMenu" name="menuJEOL">
+     <property name="title">
+      <string>JEOL</string>
+     </property>
+     <addaction name="actionPulse_list_2"/>
+     <addaction name="actionMQF_pulse_program"/>
+     <addaction name="actionMQMAS_pulse_program"/>
+    </widget>
+    <widget class="QMenu" name="menuTopspin">
+     <property name="title">
+      <string>Topspin</string>
+     </property>
+     <addaction name="actionPulse_list_3"/>
+     <addaction name="actionMQF_pulse_program_2"/>
+     <addaction name="actionMQMAS_pulse_program_2"/>
+     <addaction name="actionMQ_CPMG_MAS_pulse_program"/>
+    </widget>
+    <addaction name="actionReport"/>
+    <addaction name="actionImage"/>
+    <addaction name="separator"/>
+    <addaction name="menuJEOL"/>
+    <addaction name="menuTopspin"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout_2">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuAbout_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="text">
+    <string>Report</string>
+   </property>
+  </action>
+  <action name="actionPulse_list">
+   <property name="text">
+    <string>Pulse list</string>
+   </property>
+  </action>
+  <action name="actionPulse_list_2">
+   <property name="text">
+    <string>Pulse list</string>
+   </property>
+  </action>
+  <action name="actionMQF_pulse_program">
+   <property name="text">
+    <string>MQF pulse program</string>
+   </property>
+  </action>
+  <action name="actionMQMAS_pulse_program">
+   <property name="text">
+    <string>MQMAS pulse program</string>
+   </property>
+  </action>
+  <action name="actionPulse_list_3">
+   <property name="text">
+    <string>Pulse list</string>
+   </property>
+  </action>
+  <action name="actionMQF_pulse_program_2">
+   <property name="text">
+    <string>MQF pulse program</string>
+   </property>
+  </action>
+  <action name="actionMQMAS_pulse_program_2">
+   <property name="text">
+    <string>MQMAS pulse program</string>
+   </property>
+  </action>
+  <action name="actionMQ_CPMG_MAS_pulse_program">
+   <property name="text">
+    <string>MQ-CPMG-MAS pulse program</string>
+   </property>
+  </action>
+  <action name="actionsave_as">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionImage">
+   <property name="text">
+    <string>Picture</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>param_nucleus_combo</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>param_spin_number</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
