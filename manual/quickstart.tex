@@ -8,6 +8,7 @@
 \usepackage[UKenglish]{isodate}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{listings}
+\lstset{breaklines=true}
 \lstdefinestyle{python_code_style}{language=Python,basicstyle=\ttfamily\bfseries,}
 \newcommand*{\pythoncode}{\lstinline[{language=Python,%[
 						basicstyle=\ttfamily,
@@ -61,23 +62,52 @@ Please specify an inputfile, optionally with other arguments.
 		
 			- \url{https://www.python.org/downloads/}
 
-\item[famn\_opt] the package can be obtained from different sources:
-		
-		- From PyPI: Installation from online repository. If you use Anaconda, locate "Anaconda prompt" or "Anaconda powershell" and type
+\item[famn\_opt] The package can be obtained from different sources:
+
+		\begin{itemize}
+
+		\item From PyPI: Installation from online repository. If you use Anaconda, locate "Anaconda prompt" or "Anaconda powershell" and type
 		
 		\pythoncode{pip install famn_opt}
 		
 		else, open a prompt window and type
 		
-		\pythoncode{python pip install famn_opt}
+		\pythoncode{python pip install famn_opt} or \pythoncode{python3 pip install famn_opt}
 		
-		or
+		\hrulefill
 		
-		\pythoncode{python3 pip install famn_opt}.
+		\item From executable (in progress):
 		
-		- From executable (in progress):
+		\hrulefill
 		
-		- From source: Get the latest version from Github. Locate the 
+		\item From source: Get the latest version from Github:
+		
+		\url{https://github.com/hcolaux/famn_opt}
+		
+		
+		Uncompress the folder. If you use Anaconda, open "Anaconda prompt" or "Anaconda powershell", or a terminal/command prompt window if not. Browse to the root of the uncompressed directory that contains the file "setup.py" and type, if you use Anaconda,
+		
+		\pythoncode{setup.py sdist bdist_wheel}
+		
+		to assemble the code, then
+		
+		\pythoncode{pip install .}
+		
+		to install.
+		
+		If you use the a termimal/command prompt Window, type
+		
+		\pythoncode{python setup.py sdist bdist_wheel}
+		
+		then
+		
+		\pythoncode{python pip install .}
+		
+		The installation is successful if typing \pythoncode{import famn_opt} in the python interpreter does not return the error:
+		
+		\pythoncode{ModuleNotFoundError: No module named 'famn_opt'}
+		
+		\end{itemize}
 
 \end{description}
 
@@ -135,24 +165,22 @@ All three methods are sequentially executed in the input script.
 
 \end{description}
 
-\section{Export results}
+\section{Output results}
 
 \label{sect:pyout}
-Once the execution is successful, output files can be exported with the following commands. All methods presented open a file dialog when executed. Alternative methods that do not open a dialogue box are also presented in brackets. These take two parameters: \pythoncode{outputfilename} (File name for the output, with or without extension) and \pythoncode{outputfilepath} (filepath were the file is exported).
+Once the execution is successful, output files can be exported with the following commands. All methods presented open a file dialog when executed.
 
-\begin{description}
-
-\item[With dialogue boxes] 
+\textbf{General outputs:}
 
 \begin{itemize}
 	\item \pythoncode{filename.save()} Save a serialised copy of the class instance as a file (by default \pythoncode{.pkl}), so it can be subsequently reloaded if required.
 	\item \pythoncode{filename.load()} Loads the class instance from a file saved with the \pythoncode{filename.save()} method.
 	\item \pythoncode{filename.text_report()} Save a \pythoncode{.txt} file containing the characteristics of the FAM-N pulse.
-	\item \pythoncode{filename.step_figure(nos = 1)} Plot and save a figure showing the build-up in detect coherence against time for the FAM-N pulse obtained with the optimisation.
-	\item \pythoncode{filename.all_steps_figure()} Plot and save a figure containing all steps of the optimisation of a multiple-step FAM-N optimisation if applicable. For a single-step optimisation, produces the same figure as \pythoncode{filename.step_figure(nos=1)} for a single step optimisation.
+	\item \pythoncode{filename.step_figure(nos = 1)} Plot and save a figure showing the build-up in detect coherence against time for the FAM-N pulse obtained with the optimisation for the step specified by \pythoncode{nos}.
+	\item \pythoncode{filename.all_steps_figure()} Plot and save a figure containing all steps of the optimisation of a multiple-step FAM-N optimisation if applicable. For a single-step optimisation, produces the same figure as \pythoncode{filename.step_figure(nos=1)} for all steps.
 \end{itemize}
 
-Pulse programs:
+\textbf{Pulse programs:}
 
 \begin{itemize}
 	\item Pulse lists describing FAM-N and the durations of their components, to be copied and pasted in any pulse program: \pythoncode{filename.topspin_pulselist()} for output in the Bruker Topspin format and \pythoncode{filename.delta_pulselist()} for output in the Jeol Delta.
@@ -161,13 +189,66 @@ Pulse programs:
 	\item Shifted-echo split-t\textsubscript{1} Multiple-Quantum Carr-Purcell-Meiboom-Gill Magic-Angle-Spinning (MQ-CPMG-MAS): \pythoncode{filename.topspin_mqcpmgmas()} for Bruker Topspin.
 \end{itemize}
 
-All outputs:
+\textbf{All outputs:}
+\begin{itemize}
+	\item \pythoncode{filename.export_all()} Export all of the above.
+\end{itemize}
 
-	\pythoncode{filename.param['export_filepath']}
+\hrulefill
 
-\end{description}
+Alternative methods that do not open a dialogue box are also presented in brackets. These take two parameters: \pythoncode{outputfilename} (File name for the output, with or without extension) and \pythoncode{outputfilepath} (File path were the file is exported). Those are, in order,
+
+\begin{itemize}
+	\item \pythoncode{filename.savestate(outputfilename, outputfilepath = '')}
+	\item \pythoncode{filename.loadstate(outputfilename = '__previous_session__.pkl', outputfilepath = ''):}
+	\item \pythoncode{filename.export_text_report(outputfilename, outputfilepath)}
+	\item \pythoncode{filename.FAMNsteps[nos-1].figures['opt'].savefig(outputfullpath)} (NB: \pythoncode{nos} is the step number, 1 for a single-step FAM-N)
+	\item \pythoncode{filename.plot_allsteps_fig()} then \pythoncode{filename.figures['allsteps_fig'].savefig(outputfullpath)}
+\end{itemize}
+
+\textbf{Pulse programs:}
+
+\begin{itemize}
+	\item \pythoncode{filename.export_topspin_pulselist(outputfilepath, outputfilepath = '', first = 1))} (NB: \pythoncode{first} = index in Topspin of the first FAM-N pulse) and \pythoncode{filename.export_delta_pulselist(outputfilepath, outputfilepath)}
+	\item \pythoncode{filename.export_topspin_MQF(outputfilepath, outputfilepath)} and \pythoncode{filename.export_delta_MQF(outputfilepath, outputfilepath)}
+	\item \pythoncode{filename.export_topspin_MQMAS(outputfilepath, outputfilepath)} and \pythoncode{filename.export_delta_MQMAS(outputfilepath, outputfilepath)}
+	\item \pythoncode{filename.export_topspin_MQCPMGMAS(outputfilepath, outputfilepath)}
+\end{itemize}
+
+\textbf{All outputs:}
+\begin{itemize}
+	\item \pythoncode{filename.export_all_files(exportfilepath = None)} and \pythoncode{filename.param['export_filepath']}
+\end{itemize}
+
+\hrulefill
+
+\textbf{Screen outputs:}
+\begin{itemize}
+	\item \pythoncode{filename.screen_report()}: Display a summary of the current FAM-N optimisation in the python interpreter.
+	\item \pythoncode{filename.plot_allsteps_fig()}: Display a figure representing the magnetisation build-up of the final detected element as a function of time and the optimised FAM-N pulses including all steps of it.
+\end{itemize}
 
 
 \section{Bibliography}
+
+\textbf{FAM-N:}
+\begin{itemize}
+\item Colaux, H., Dawson, D. M., Ashbrook, S. E.,
+Efficient Amplitude-Modulated Pulses for Triple-to Single-Quantum Coherence Conversion in MQMAS NMR,
+The Journal of Physical Chemistry A, \textit{2014}, 118, 31
+\item Colaux, H., Dawson, D. M., Ashbrook, S. E.,
+Investigating FAM-N pulses for signal enhancement in MQMAS NMR of quadrupolar nuclei,
+Solid State Nuclear Magnetic Resonance, \textit{2017}, 84, 89
+\item Kanwal N., Colaux, H., Dawson, D. M., Nishiyama Y., Ashbrook, S. E.,
+Sensitivity improvement in 5QMAS NMR experiments using FAM-N pulses
+Solid State Nuclear Magnetic Resonance, \textit{2019}, 100, 1
+\end{itemize}
+
+\textbf{SIMPSON:}
+\begin{itemize}
+\item Bak, M.; Rasmussen, J.; Nielsen, N. \textit{et al.},
+SIMPSON: a general simulation program for solid-state NMR spectroscopy
+Journal of Magnetic Resonance, \textit{2000}, 147, 296
+\end{itemize}
 
 \end{document}
