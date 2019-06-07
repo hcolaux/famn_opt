@@ -1,0 +1,765 @@
+<spininfos>
+	<h1>
+		<spin>1/2</spin>
+		<gamma>42.57747892</gamma>
+		<natural_abundance>99.9885</natural_abundance>
+		<chemical_shift_range>20</chemical_shift_range>
+		<delta_fullname>Hydrogen1</delta_fullname>
+	</h1>
+
+	<h2>
+		<spin>1</spin>
+		<gamma>6.53590335033966</gamma>
+		<natural_abundance>0.0115</natural_abundance>
+		<quad_constant>0.286</quad_constant>
+		<delta_fullname>Hydrogen2</delta_fullname>
+	</h2>
+	
+	<h3>
+		<spin>1/2</spin>
+		<gamma>0</gamma>
+		<natural_abundance>4.5414841525355</natural_abundance>
+		<delta_fullname>Hydrogen3</delta_fullname>
+	</h3>
+	
+	<he3>
+		<spin>1/2</spin>
+		<gamma>-32.4341019780423</gamma>
+		<delta_fullname>Helium3</delta_fullname>
+	</he3>
+	
+	<li6>
+		<spin>1</spin>
+		<gamma>6.26613223630565</gamma>
+		<quad_constant>-0.0808</quad_constant>
+		<delta_fullname>Lithium6</delta_fullname>
+	</li6>
+
+	<li7>
+		<spin>3/2</spin>
+		<gamma>16.5484598840637</gamma>
+		<quad_constant>-4.01</quad_constant>
+		<typical_quad_coupling>0.05</typical_quad_coupling>
+		<delta_fullname>Lithium7</delta_fullname>
+	</li7>
+	
+	<be9>
+		<spin>3/2</spin>
+		<gamma>-5.98368473344875</gamma>
+		<quad_constant>5.288</quad_constant>
+		<typical_quad_coupling>0.4</typical_quad_coupling>
+		<delta_fullname>Beryllium9</delta_fullname>
+	</be9>
+	
+	<b10>
+		<spin>3</spin>
+		<gamma>4.57519460187685</gamma>
+		<delta_fullname>Beryllium10</delta_fullname>
+	</b10>
+	
+	<b11>
+		<spin>3/2</spin>
+		<gamma>13.662985540456</gamma>
+		<chemical_shift_range>200</chemical_shift_range>
+		<typical_quad_coupling>2</typical_quad_coupling>
+		<delta_fullname>Boron11</delta_fullname>
+	</b11>
+	
+	<c13>
+		<spin>1/2</spin>
+		<gamma>10.70839975436</gamma>
+		<chemical_shift_range>400</chemical_shift_range>
+		<delta_fullname>Carbon13</delta_fullname>
+	</c13>
+	
+	<n14>
+		<spin>1</spin>
+		<gamma>3.07770614021257</gamma>
+		<delta_fullname>Nitrogen14</delta_fullname>
+	</n14>
+	
+	<n15>
+		<spin>1/2</spin>
+		<gamma>-4.317267066595</gamma>
+		<delta_fullname>Nitrogen15</delta_fullname>
+	</n15>
+	
+	<o17>
+		<spin>5/2</spin>
+		<gamma>-5.77423682833982</gamma>
+		<chemical_shift_range>700</chemical_shift_range>
+		<typical_quad_coupling>7</typical_quad_coupling>
+		<delta_fullname>Oxygen17</delta_fullname>
+	</o17>
+	
+	<f19>
+		<spin>1/2</spin>
+		<gamma>40.0470919920949</gamma>
+		<chemical_shift_range>800</chemical_shift_range>
+		<delta_fullname>Fluorine19</delta_fullname>
+	</f19>
+	
+	<ne21>
+		<spin>3/2</spin>
+		<gamma>-3.36307286303565</gamma>
+		<delta_fullname>Neon21</delta_fullname>
+	</ne21>
+	
+	<na23>
+		<spin>3/2</spin>
+		<gamma>11.2695253344016</gamma>
+		<quad_constant>10.04</quad_constant>
+		<typical_quad_coupling>2</typical_quad_coupling>
+		<delta_fullname>Sodium23</delta_fullname>
+	</na23>
+	
+	<mg25>
+		<spin>5/2</spin>
+		<gamma>-2.60829486936722</gamma>
+		<delta_fullname>Magnesium25</delta_fullname>
+	</mg25>
+	
+	<al27>
+		<spin>5/2</spin>
+		<gamma>11.1030912808324</gamma>
+		<chemical_shift_range>300</chemical_shift_range>
+		<typical_quad_coupling>8</typical_quad_coupling>
+		<delta_fullname>Aluminium27</delta_fullname>
+	</al27>
+	
+	<si29>
+		<spin>1/2</spin>
+		<gamma>-8.46549916954084</gamma>
+		<chemical_shift_range>200</chemical_shift_range>
+		<delta_fullname>Silicon29</delta_fullname>
+	</si29>
+	
+	<p31>
+		<spin>1/2</spin>
+		<gamma>17.2514409015029</gamma>
+		<chemical_shift_range>800</chemical_shift_range>
+		<delta_fullname>Phosphorus31</delta_fullname>
+	</p31>
+	
+	<s33>
+		<spin>3/2</spin>
+		<gamma>-3.27172429189863</gamma>
+		<delta_fullname>Sulfur33</delta_fullname>
+	</s33>
+	
+	<cl35>
+		<spin>3/2</spin>
+		<gamma>4.17654258422303</gamma>
+		<delta_fullname>Chlorine35</delta_fullname>
+	</cl35>
+	
+	<cl37>
+		<spin>3/2</spin>
+		<gamma>21.843688</gamma>
+		<delta_fullname>Chlorine37</delta_fullname>
+	</cl37>
+	
+	<k39>
+		<spin>3/2</spin>
+		<gamma>1.98953419147386</gamma>
+		<typical_quad_coupling>4</typical_quad_coupling>
+		<delta_fullname>Potassium39</delta_fullname>
+	</k39>
+	
+	<k40>
+		<spin>4</spin>
+		<gamma>-2.4737229987853</gamma>
+		<delta_fullname>Potassium40</delta_fullname>
+	</k40>
+	
+	<k41>
+		<spin>3/2</spin>
+		<gamma>-1.09202671329138</gamma>
+		<delta_fullname>Potassium41</delta_fullname>
+	</k41>
+	
+	<ca43>
+		<spin>7/2</spin>
+		<gamma>-2.86967344085761</gamma>
+		<delta_fullname>Calcium43</delta_fullname>
+	</ca43>
+	
+	<sc45>
+		<spin>7/2</spin>
+		<gamma>10.3590769359653</gamma>
+		<typical_quad_coupling>3</typical_quad_coupling>
+		<delta_fullname>Scandium45</delta_fullname>
+	</sc45>
+	
+	
+	<ti47>
+		<spin>7/2</spin>
+		<gamma>-2.40409907738032</gamma>
+		<delta_fullname>Titanium47</delta_fullname>
+	</ti47>
+	
+	
+	<ti49>
+		<spin>7/2</spin>
+		<gamma>-2.40475161264699</gamma>
+		<delta_fullname>Titanium49</delta_fullname>
+	</ti49>
+
+	<v50>
+		<spin>6</spin>
+		<gamma>4.2504714876837</gamma>
+		<delta_fullname>Vanadium50</delta_fullname>
+	</v50>
+	
+	
+	<v51>
+		<spin>7/2</spin>
+		<gamma>11.2132836380766</gamma>
+		<chemical_shift_range>5000</chemical_shift_range>
+		<typical_quad_coupling>3</typical_quad_coupling>
+		<delta_fullname>Vanadium51</delta_fullname>
+	</v51>
+	
+	
+	<cr53>
+		<spin>3/2</spin>
+		<gamma>-2.41148386673978</gamma>
+		<delta_fullname>Chromium53</delta_fullname>
+	</cr53>
+	
+	
+	<mn55>
+		<spin>5/2</spin>
+		<gamma>10.5762510655331</gamma>
+		<delta_fullname>Manganese55</delta_fullname>
+	</mn55>
+	
+	<fe57>
+		<spin>1/2</spin>
+		<gamma>1.38156469618697</gamma>
+		<delta_fullname>Iron57</delta_fullname>
+	</fe57>
+	
+	<co59>
+		<spin>7/2</spin>
+		<gamma>10.0776909965788</gamma>
+		<chemical_shift_range>18000</chemical_shift_range>
+		<delta_fullname>Cobalt59</delta_fullname>
+	</co59>
+	
+	
+	<ni61>
+		<spin>3/2</spin>
+		<gamma>-3.81139483068178</gamma>
+		<delta_fullname>Nickel61</delta_fullname>
+	</ni61>
+	
+	
+	<cu63>
+		<spin>3/2</spin>
+		<gamma>11.3187669188645</gamma>
+		<delta_fullname>Copper63</delta_fullname>
+	</cu63>
+	
+	<cu65>
+		<spin>3/2</spin>
+		<gamma>12.102619337537</gamma>
+		<delta_fullname>Copper65</delta_fullname>
+	</cu65>
+	
+	<zn67>
+		<spin>5/2</spin>
+		<gamma>-2.66853262800335</gamma>
+		<delta_fullname>Zinc67</delta_fullname>
+	</zn67>
+	
+	<ga69>
+		<spin>3/2</spin>
+		<gamma>-10.2477639687668</gamma>
+		<delta_fullname>Gallium69</delta_fullname>
+	</ga69>
+	
+	
+	<ga71>
+		<spin>3/2</spin>
+		<gamma>13.0207364577512</gamma>
+		<delta_fullname>Gallium71</delta_fullname>
+	</ga71>
+	
+	<ge73>
+		<spin>9/2</spin>
+		<gamma>-1.48973896875273</gamma>
+		<delta_fullname>Germanium73</delta_fullname>
+	</ge73>
+	
+	<as75>
+		<spin>3/2</spin>
+		<gamma>-7.31499991691815</gamma>
+		<delta_fullname>Arsenic75</delta_fullname>
+	</as75>
+	
+	<se77>
+		<spin>1/2</spin>
+		<gamma>8.15730835463883</gamma>
+		<delta_fullname>Selenium77</delta_fullname>
+	</se77>
+	
+	<br79>
+		<spin>3/2</spin>
+		<gamma>10.7041550920277</gamma>
+		<delta_fullname>Bromine79</delta_fullname>
+	</br79>
+	
+	
+	<br81>
+		<spin>3/2</spin>
+		<gamma>11.5383816417382</gamma>
+		<delta_fullname>Bromine81</delta_fullname>
+	</br81>
+	
+	<kr83>
+		<spin>9/2</spin>
+		<gamma>-1.64422494243408</gamma>
+		<delta_fullname>Krypton83</delta_fullname>
+	</kr83>
+	
+	<rb85>
+		<spin>5/2</spin>
+		<gamma>4.12641959968521</gamma>
+		<delta_fullname>Rubidium85</delta_fullname>
+	</rb85>
+	
+	<rb87>
+		<spin>3/2</spin>
+		<gamma>13.9839946944746</gamma>
+		<typical_quad_coupling>4</typical_quad_coupling>
+		<delta_fullname>Rubidium87</delta_fullname>
+	</rb87>
+	
+	<sr87>
+		<spin>9/2</spin>
+		<gamma>-1.85246486152494</gamma>
+		<delta_fullname>Strontium87</delta_fullname>
+	</sr87>
+	
+	<y89>
+		<spin>1/2</spin>
+		<gamma>-2.09492309338057</gamma>
+		<delta_fullname>Yttrium89</delta_fullname>
+	</y89>
+	
+	<zr91>
+		<spin>5/2</spin>
+		<gamma>-3.97478329525992</gamma>
+		<typical_quad_coupling>20</typical_quad_coupling>
+		<delta_fullname>Zirconium91</delta_fullname>
+	</zr91>
+	
+	<nb93>
+		<spin>9/2</spin>
+		<gamma>-10.4523417326171</gamma>
+		<typical_quad_coupling>20</typical_quad_coupling>
+		<delta_fullname>Niobium93</delta_fullname>
+	</nb93>
+	
+	<mo95>
+		<spin>5/2</spin>
+		<gamma>-2.78743967331145</gamma>
+		<typical_quad_coupling>2</typical_quad_coupling>
+		<delta_fullname>Molybdenum95</delta_fullname>
+	</mo95>
+	
+	<mo97>
+		<spin>5/2</spin>
+		<gamma>-2.84632700225546</gamma>
+		<typical_quad_coupling>2</typical_quad_coupling>
+		<delta_fullname>Molybdenum97</delta_fullname>
+	</mo97>
+	
+	<tc99>
+		<spin>9/2</spin>
+		<gamma>9.62935152188894</gamma>
+		<delta_fullname>Technetium97</delta_fullname>
+	</tc99>
+	
+	<ru99>
+		<spin>3/2</spin>
+		<gamma>-1.95442270116847</gamma>
+		<delta_fullname>Ruthenium99</delta_fullname>
+	</ru99>
+	
+	<ru101>
+		<spin>5/2</spin>
+		<gamma>-2.1836058192208</gamma>
+		<delta_fullname>Ruthenium101</delta_fullname>
+	</ru101>
+	
+	<rh103>
+		<spin>1/2</spin>
+		<gamma>-1.34767631161924</gamma>
+		<delta_fullname>Rhodium103</delta_fullname>
+	</rh103>
+	
+	<pd105>
+		<spin>5/2</spin>
+		<gamma>-1.95760580003031</gamma>
+		<delta_fullname>Palladium105</delta_fullname>
+	</pd105>
+	
+	<ag107>
+		<spin>1/2</spin>
+		<gamma>-1.7330668232174</gamma>
+		<delta_fullname>Silver107</delta_fullname>
+	</ag107>
+	
+	<ag109>
+		<spin>1/2</spin>
+		<gamma>-1.99246073256744</gamma>
+		<delta_fullname>Silver109</delta_fullname>
+	</ag109>
+	
+	<cd111>
+		<spin>1/2</spin>
+		<gamma>-9.06914999544694</gamma>
+		<delta_fullname>Cadnium111</delta_fullname>
+	</cd111>
+	
+	<cd113>
+		<spin>1/2</spin>
+		<gamma>-9.4870829182591</gamma>
+		<delta_fullname>Cadnium113</delta_fullname>
+	</cd113>
+	
+	<in113>
+		<spin>9/2</spin>
+		<gamma>9.36547262624258</gamma>
+		<delta_fullname>Indium113</delta_fullname>
+	</in113>
+	
+	<in115>
+		<spin>9/2</spin>
+		<gamma>9.38568530401525</gamma>
+		<delta_fullname>Indium115</delta_fullname>
+	</in115>	
+	
+	<sn115>
+		<spin>1/2</spin>
+		<gamma>-14.007704006347</gamma>
+		<delta_fullname>Tin115</delta_fullname>
+	</sn115>
+	
+	<sn117>
+		<spin>1/2</spin>
+		<gamma>-15.2610491831957</gamma>
+		<delta_fullname>Tin117</delta_fullname>
+	</sn117>
+	
+	<sn119>
+		<spin>1/2</spin>
+		<gamma>-15.9659464261497</gamma>
+		<delta_fullname>Tin119</delta_fullname>
+	</sn119>
+	
+	<sb121>
+		<spin>5/2</spin>
+		<gamma>10.2551487581263</gamma>
+		<delta_fullname>Antimony121</delta_fullname>
+	</sb121>
+	
+	<sb123>
+		<spin>7/2</spin>
+		<gamma>-5.72957795130823</gamma>
+		<delta_fullname>Antimony123</delta_fullname>
+	</sb123>
+	
+	<te123>
+		<spin>1/2</spin>
+		<gamma>-11.2349081793494</gamma>
+		<delta_fullname>Tellerium123</delta_fullname>
+	</te123>
+	
+	<te125>
+		<spin>1/2</spin>
+		<gamma>-13.5454273332906</gamma>
+		<delta_fullname>Tellerium125</delta_fullname>
+	</te125>
+	
+	<i127>
+		<spin>5/2</spin>
+		<gamma>8.57776706639786</gamma>
+		<delta_fullname>Iodine127</delta_fullname>
+	</i127>
+	
+	<xe129>
+		<spin>1/2</spin>
+		<gamma>-11.8603855141511</gamma>
+		<delta_fullname>Xenon129</delta_fullname>
+	</xe129>
+	
+	<xe131>
+		<spin>3/2</spin>
+		<gamma>3.51585524220615</gamma>
+		<delta_fullname>Xenon131</delta_fullname>
+	</xe131>
+	
+	<cs133>
+		<spin>7/2</spin>
+		<gamma>5.62335157609098</gamma>
+		<typical_quad_coupling>0.7</typical_quad_coupling>
+		<delta_fullname>Cesium133</delta_fullname>
+	</cs133>
+	
+	<ba135>
+		<spin>3/2</spin>
+		<gamma>-4.26167599567737</gamma>
+		<delta_fullname>Barium135</delta_fullname>
+	</ba135>
+	
+	<ba137>
+		<spin>3/2</spin>
+		<gamma>-4.76330054531441</gamma>
+		<delta_fullname>Barium137</delta_fullname>
+	</ba137>
+	
+	<la138>
+		<spin>5</spin>
+		<gamma>5.66152329764214</gamma>
+		<delta_fullname>Lanthanum138</delta_fullname>
+	</la138>
+	
+	<la139>
+		<spin>7/2</spin>
+		<gamma>6.06115021889987</gamma>
+		<delta_fullname>Lanthanum139</delta_fullname>
+	</la139>
+	
+	<pr141>
+		<spin>5/2</spin>
+		<gamma>-13.0359039238279</gamma>
+		<delta_fullname>Praseodymium141</delta_fullname>
+	</pr141>
+	
+	<nd143>
+		<spin>7/2</spin>
+		<gamma>-2.31952414062128</gamma>
+		<delta_fullname>Neodymium143</delta_fullname>
+	</nd143>
+	
+	<nd145>
+		<spin>7/2</spin>
+		<gamma>-1.42921138896522</gamma>
+		<delta_fullname>Neodymium145</delta_fullname>
+	</nd145>
+	
+	<sm147>
+		<spin>7/2</spin>
+		<gamma>-1.77457761547463</gamma>
+		<delta_fullname>Samarium147</delta_fullname>
+	</sm147>
+	
+	<sm149>
+		<spin>7/2</spin>
+		<gamma>-1.4629522369007</gamma>
+		<delta_fullname>Samarium149</delta_fullname>
+	</sm149>
+	
+	<eu151>
+		<spin>5/2</spin>
+		<gamma>10.585395265042</gamma>
+		<delta_fullname>Europium151</delta_fullname>
+	</eu151>
+	
+	<eu153>
+		<spin>5/2</spin>
+		<gamma>4.67231166434877</gamma>
+		<delta_fullname>Europium153</delta_fullname>
+	</eu153>
+	
+	<gb155>
+		<spin>3/2</spin>
+		<gamma>-1.30698039267064</gamma>
+		<delta_fullname>Gadolinium155</delta_fullname>
+	</gb155>
+	
+	<gb157>
+		<spin>3/2</spin>
+		<gamma>-1.71409873709971</gamma>
+		<delta_fullname>Gadolinium157</delta_fullname>
+	</gb157>
+	
+	<td159>
+		<spin>3/2</spin>
+		<gamma>-10.2352543902398</gamma>
+		<delta_fullname>Terbium159</delta_fullname>
+	</td159>
+	
+	<dy161>
+		<spin>5/2</spin>
+		<gamma>-1.46422547644544</gamma>
+		<delta_fullname>Dysprosium161</delta_fullname>
+	</dy161>
+	
+	<dy163>
+		<spin>5/2</spin>
+		<gamma>2.05150721645453</gamma>
+		<delta_fullname>Dysprosium163</delta_fullname>
+	</dy163>
+	
+	<ho165>
+		<spin>7/2</spin>
+		<gamma>8.99862048241576</gamma>
+		<delta_fullname>Holmium165</delta_fullname>
+	</ho165>
+	
+	<er167>
+		<spin>7/2</spin>
+		<gamma>-1.22803954089706</gamma>
+		<delta_fullname>Erbium167</delta_fullname>
+	</er167>
+	
+	<tm169>
+		<spin>1/2</spin>
+		<gamma>-3.51732424233089</gamma>
+		<delta_fullname>Thulium169</delta_fullname>
+	</tm169>
+	
+	<tm171>
+		<spin>1/2</spin>
+		<gamma>-3.51732424233089</gamma>
+		<delta_fullname>Thulium171</delta_fullname>
+	</tm171>
+	
+	<yb173>
+		<spin>5/2</spin>
+		<gamma>-2.07299313377194</gamma>
+		<delta_fullname>Ytterbuim173</delta_fullname>
+	</yb173>
+	
+	<lu175>
+		<spin>7/2</spin>
+		<gamma>4.86170604662813</gamma>
+		<delta_fullname>Lutetium175</delta_fullname>
+	</lu175>
+	
+	<lu176>
+		<spin>7</spin>
+		<gamma>3.45047916623229</gamma>
+		<delta_fullname>Lutetium176</delta_fullname>
+	</lu176>
+	
+	<hf177>
+		<spin>7/2</spin>
+		<gamma>1.7281043720918</gamma>
+		<delta_fullname>Hafnium177</delta_fullname>
+	</hf177>
+	
+	<hf179>
+		<spin>9/2</spin>
+		<gamma>-1.08543671188673</gamma>
+		<delta_fullname>Hafnium179</delta_fullname>
+	</hf179>
+	
+	<ta181>
+		<spin>7/2</spin>
+		<gamma>5.1626680440149</gamma>
+		<delta_fullname>Tantalum181</delta_fullname>
+	</ta181>
+	
+	<w183>
+		<spin>1/2</spin>
+		<gamma>1.7956508440246</gamma>
+		<delta_fullname>Tungsten183</delta_fullname>
+	</w183>
+	
+	<re185>
+		<spin>5/2</spin>
+		<gamma>9.71752336036185</gamma>
+		<delta_fullname>Rhenium185</delta_fullname>
+	</re185>
+	
+	<re187>
+		<spin>5/2</spin>
+		<gamma>9.81699519979429</gamma>
+		<delta_fullname>Rhenium187</delta_fullname>
+	</re187>
+	
+	<os187>
+		<spin>1/2</spin>
+		<gamma>0.985630169608969</gamma>
+		<delta_fullname>Osnium187</delta_fullname>
+	</os187>
+	
+	<os189>
+		<spin>3/2</spin>
+		<gamma>3.35360155237225</gamma>
+		<delta_fullname>Osnium189</delta_fullname>
+	</os189>
+	
+	<ir191>
+		<spin>3/2</spin>
+		<gamma>0.7658535861582</gamma>
+		<delta_fullname>Iridium191</delta_fullname>
+	</ir191>
+	
+	<ir193>
+		<spin>3/2</spin>
+		<gamma>-0.831902887541337</gamma>
+		<delta_fullname>Iridium193</delta_fullname>
+	</ir193>
+	
+	<pt195>
+		<spin>1/2</spin>
+		<gamma>-9.29226135242031</gamma>
+		<delta_fullname>Platinium195</delta_fullname>
+	</pt195>
+	
+	<au197>
+		<spin>3/2</spin>
+		<gamma>-0.75289837379052</gamma>
+		<delta_fullname>Gold197</delta_fullname>
+	</au197>
+	
+	<hg199>
+		<spin>1/2</spin>
+		<gamma>7.71231909150105</gamma>
+		<delta_fullname>Mercury199</delta_fullname>
+	</hg199>
+	
+	<hg201>
+		<spin>3/2</spin>
+		<gamma>-2.8469158755449</gamma>
+		<delta_fullname>Mercury201</delta_fullname>
+	</hg201>
+	
+	<tl203>
+		<spin>1/2</spin>
+		<gamma>24.7316261423067</gamma>
+		<delta_fullname>Thallium203</delta_fullname>
+	</tl203>
+	
+	<tl205>
+		<spin>1/2</spin>
+		<gamma>24.9748896981744</gamma>
+		<delta_fullname>Thallium205</delta_fullname>
+	</tl205>
+	
+	<pb207>
+		<spin>1/2</spin>
+		<gamma>-8.87559371140573</gamma>
+		<delta_fullname>Lead207</delta_fullname>
+	</pb207>
+	
+	<bi209>
+		<spin>9/2</spin>
+		<gamma>6.96255129544115</gamma>
+		<delta_fullname>Bismuth209</delta_fullname>
+	</bi209>
+	
+	<u235>
+		<spin>7/2</spin>
+		<gamma>-0.827605704077856</gamma>
+		<delta_fullname>Uranium235</delta_fullname>
+	</u235>
+	
+	
+</spininfos>

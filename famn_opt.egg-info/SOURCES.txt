@@ -1,0 +1,15 @@
+Changelog.txt
+MANIFEST.in
+Readme.txt
+setup.py
+famn_opt/__init__.py
+famn_opt/functions.py
+famn_opt/gui_main.py
+famn_opt/opt.py
+famn_opt/spininfo.xml
+famn_opt.egg-info/PKG-INFO
+famn_opt.egg-info/SOURCES.txt
+famn_opt.egg-info/dependency_links.txt
+famn_opt.egg-info/not-zip-safe
+famn_opt.egg-info/requires.txt
+famn_opt.egg-info/top_level.txt

@@ -1,0 +1,22 @@
+Dear all,
+
+I am really happy to present you a complete re-writting of the FAM-N optimisation program, featuring:
+
+- Modular and object-oriented Python 3.7.3 package with highly improved readebility.
+- Significantly faster execution for long pulses, no calculation is repeated.
+- Native integration of complex FAM-N pulses - succession/concatenation etc.
+- Instance manager. No need to repeat optimisations.
+- End-user oriented GUI. Advanced execution - i.e. loops on parameters, re-optimisations etc. - possible via console mode.
+
+As it is the first version, it probably have bugs everywhere please feel free to report me any bug you may encounter.
+
+Best,
+
+Henri
+
+– 
+
+– Version 0.3a:
+    – The number of points now refers to a fixed nutation
+    – Added the option to stop 'min_improvement' : Minumum improvement
+	

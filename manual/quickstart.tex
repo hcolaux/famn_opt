@@ -1,0 +1,173 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[UKenglish]{isodate}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{listings}
+\lstdefinestyle{python_code_style}{language=Python,basicstyle=\ttfamily\bfseries,}
+\newcommand*{\pythoncode}{\lstinline[{language=Python,%[
+						basicstyle=\ttfamily,
+						}]}
+
+\usepackage[hidelinks,breaklinks]{hyperref}
+\author{Henri Colaux}
+\title{\pythoncode{famn_opt v0.3.2a} user manual}
+
+\begin{document}
+
+\maketitle 
+\begin{abstract}
+FAM-N (Fast Amplitude Modulation - N pulses) is a composite pulse that exploits the phenomenon of inversion/saturation of satellite transtion into the central transition to enhance the efficiency of the conversion pulse in MQMAS experiments, improving the overall sensitivity of the experiment. This program determines the number of individual pulse and their respective durations required for an optimal conversion under the experimental conditions defined by the user.
+\end{abstract}
+
+\tableofcontents
+
+\section{Installation}
+
+To be executed, make sure that you have all of the following programs installed:
+
+\begin{description}
+\item[SIMPSON] \pythoncode{famn_opt} requires SIMPSON to be installed in order to function. SIMPSON can be obtained from
+		
+		\url{http://nmr.au.dk/software/simpson/}.
+		
+		The installation is successful if typing "simpson" in the command prompt returns the version number, i.e., 
+
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+SIMPSON version 4.1.1, Copyright (C)
+1999-2000 Mads Bak and Jimmy T. Rasmussen
+2001 Mads Bak and Thomas Vosegaard
+2002-2007 Thomas Vosegaard
+2008-2009 Zdenek Tosner, Thomas Vosegaard, and Niels Chr. Nielsen
+2009 plus Rasmus Andersen
+2010-2014 Zdenek Tosner, Niels Chr. Nielsen, Thomas Vosegaard
+SIMPSON comes with ABSOLUTELY NO WARRANTY, for details
+read the COPYING file included in this distribution.
+This is free software, and you are welcome to redistribute
+it under certain conditions according to the GNU General Public License.
+
+Please specify an inputfile, optionally with other arguments.
+\end{lstlisting} 
+		
+\item[Python] \pythoncode{famn_opt} was developed in python 3.7.3. I recommend installing Anaconda, which provides by default all packages required for this program and for scientific production in general: 
+		
+			- \url{https://www.anaconda.com/distribution/#download-section}
+			
+		You can also install the conventionnal python distribution for :
+		
+			- \url{https://www.python.org/downloads/}
+
+\item[famn\_opt] the package can be obtained from different sources:
+		
+		- From PyPI: Installation from online repository. If you use Anaconda, locate "Anaconda prompt" or "Anaconda powershell" and type
+		
+		\pythoncode{pip install famn_opt}
+		
+		else, open a prompt window and type
+		
+		\pythoncode{python pip install famn_opt}
+		
+		or
+		
+		\pythoncode{python3 pip install famn_opt}.
+		
+		- From executable (in progress):
+		
+		- From source: Get the latest version from Github. Locate the 
+
+\end{description}
+
+
+%\section{GUI mode}
+%
+%In development…
+
+
+\section{Usage in Spyder}
+
+Anaconda comes with Spyder, a python editor with built-in iPython interpreter and code execution. Here is a quick guide for FAM-N optimisation once \pythoncode{famn_opt} is successfully installed.
+
+\begin{itemize}
+\item Open Spyder
+\item Type \pythoncode{import famn_opt} in the iPython console.
+\item Type \pythoncode{famn_opt.inputfile()} in the iPython console to get and save an input script for FAMN optimisation. By default, the file name gives the class instance name,  \textit{e.g.} \pythoncode{filename} as used below.
+\item Open \pythoncode{filename.py} with spyder.
+\item Fill-in the input parameters.
+\item Execute the script with Spyder (press F5 or the play button) and wait for completion.
+\item If you have filled \pythoncode{filename.param['export_filepath']} with a non-valid or an empty path, execute
+
+ \pythoncode{filename.export_all_select()}
+ 
+ to select the output folder. For individual exports, see section \ref{sect:pyout}.
+\end{itemize}
+
+\section{Usage with the Python interpreter}
+\label{sect:pyin}
+
+This sections describes a more general usage than with Spyder that uses the default python interpreter.
+
+\begin{description}
+\item[Import package] The package must be imported from the python interpreter with
+
+\pythoncode{import famn_opt}
+
+\item[Get input script] The execution in console mode is easier from the input script, from which the simulation parameters can be easily modified. This script defines a new class instance, highlights the parameters relevant for the end user then carry out the optimisation. Typing the command
+
+\pythoncode{famn_opt.inputfile()}
+
+opens a dialog file that allows you to save a copy of this input script. As before, the instance name is by default given by the file name, \textit{e.g.} \pythoncode{filename} as used below. A detailed description of all of the parameters relevant for the end user are given in this file. For a detailed description of all parameters, see the file \pythoncode{famn_opt/opt.py}
+
+\item[Code execution]
+
+Internally, the code execution is carried out by three methods:
+
+\begin{itemize}
+\item \pythoncode{filename.initialise()}: Organises the input and returns error codes.
+\item \pythoncode{filename.FAMN_loop()}: Runs the actual simulation.
+\item \pythoncode{filename.finalise()}: Organises the simulation results for the output.
+\end{itemize}
+
+All three methods are sequentially executed in the input script.
+
+\end{description}
+
+\section{Export results}
+
+\label{sect:pyout}
+Once the execution is successful, output files can be exported with the following commands. All methods presented open a file dialog when executed. Alternative methods that do not open a dialogue box are also presented in brackets. These take two parameters: \pythoncode{outputfilename} (File name for the output, with or without extension) and \pythoncode{outputfilepath} (filepath were the file is exported).
+
+\begin{description}
+
+\item[With dialogue boxes] 
+
+\begin{itemize}
+	\item \pythoncode{filename.save()} Save a serialised copy of the class instance as a file (by default \pythoncode{.pkl}), so it can be subsequently reloaded if required.
+	\item \pythoncode{filename.load()} Loads the class instance from a file saved with the \pythoncode{filename.save()} method.
+	\item \pythoncode{filename.text_report()} Save a \pythoncode{.txt} file containing the characteristics of the FAM-N pulse.
+	\item \pythoncode{filename.step_figure(nos = 1)} Plot and save a figure showing the build-up in detect coherence against time for the FAM-N pulse obtained with the optimisation.
+	\item \pythoncode{filename.all_steps_figure()} Plot and save a figure containing all steps of the optimisation of a multiple-step FAM-N optimisation if applicable. For a single-step optimisation, produces the same figure as \pythoncode{filename.step_figure(nos=1)} for a single step optimisation.
+\end{itemize}
+
+Pulse programs:
+
+\begin{itemize}
+	\item Pulse lists describing FAM-N and the durations of their components, to be copied and pasted in any pulse program: \pythoncode{filename.topspin_pulselist()} for output in the Bruker Topspin format and \pythoncode{filename.delta_pulselist()} for output in the Jeol Delta.
+	\item Multiple-Quantum Filtered (MQF) pulse program: \pythoncode{filename.topspin_mqf()} for Bruker Topspin and \pythoncode{filename.delta_mqf()} for Jeol Delta.
+	\item Shifted-echo split-t\textsubscript{1} Multiple-Quantum Magic-Angle-Spinning (MQMAS): \pythoncode{filename.topspin_mqmas()} for Bruker Topspin and \pythoncode{filename.delta_mqmas()} for Jeol Delta.
+	\item Shifted-echo split-t\textsubscript{1} Multiple-Quantum Carr-Purcell-Meiboom-Gill Magic-Angle-Spinning (MQ-CPMG-MAS): \pythoncode{filename.topspin_mqcpmgmas()} for Bruker Topspin.
+\end{itemize}
+
+All outputs:
+
+	\pythoncode{filename.param['export_filepath']}
+
+\end{description}
+
+
+\section{Bibliography}
+
+\end{document}

@@ -1,0 +1,4 @@
+include Changelog.txt
+include Readme.txt
+include Quickstart.txt
+include famn_opt/spininfo.xml

@@ -1,0 +1,48 @@
+------------------------------------------
+------- FAM-N optimisation results -------
+
+------- Input parameters-------
+Instance name: famn
+Spin system:
+     Nucleus: 27Al
+     Proton Larmor Frequency: 600.0 MHz
+     MAS rate: 12500 Hz
+     RF field: 80000 Hz
+     Quadrupolar coupling constant (CQ): 3.0 MHz
+     Asymmetry parameters (ηQ): 0
+
+Transfer:
+     Simple optimisation
+      Transfer type: conversion
+     Transition: 3
+
+Advanced parameters:
+     Minimum improvement: 1.1
+     Maximum number of pulses: 30
+     Number of points per 360° nutation: 180
+     Minimum time increment (μs): 0.01
+     maxdt ratio: 20
+     Crystal file: ./famn_temp/famn_cryst
+     Number of γ: 4
+     num_cores: 0
+
+------- Results -------
+Theoretical improvement ratio: ×1.34
+Number of pulses: 2
+Time increment (μs): 0.069
+Total duration (μs): 3.056
+
+– Points of phase inversion (Number of points)
+     [30]
+
+– Position of maxima (Number of points)
+     [19, 44]
+
+– Amplitude of maxima
+     [[0.3158377  0.42169428]]
+
+– Pulse durations (Number of points)
+     [30 14]
+
+– Pulse durations (μs)
+     [2.08333333 0.97222222]
